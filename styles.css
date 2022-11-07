@@ -1,0 +1,362 @@
+/*
+Author: Tess Thomas
+File Name: styles.css
+*/
+
+/* CSS Reset */
+*  {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  color:#545454;
+}
+
+/* Style rules for Mobile Viewport */
+/* General style rules */
+body  {
+  background-color:rgba(0, 135, 79, 0.05);
+}
+
+img  {
+  max-width: 100%;
+}
+
+.tablet-desktop  {
+  display: none;
+}
+
+/* Style rules for Header */
+header  {
+  top: 0;
+  padding: 10px;
+  background-color: #cacfcd;
+}
+
+/* Style rules for Navigation */
+nav  {
+  padding: 1%;
+}
+
+nav ul  {
+  list-style-type: none;
+  text-align: center;
+}
+
+nav li  {
+  display: block;
+  border-top: 2px solid #A4640C;
+  width: 95%;
+  margin: 0 auto;
+}
+
+li:first-child  {
+  border-top: none;
+}
+
+nav li a  {
+  display: block;
+  text-decoration: none;
+  font-size: 1.25em;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  color: #545454;
+  padding: 0.5em 1em;
+}
+
+/* Style rules for Hero */
+.hero  {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  margin-top: 1.5rem;
+}
+
+.hero h1, .hero h3, .hero h5  {
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translate( -50%, -50% );
+}
+
+.hero h1  {
+  top: 20%;
+}
+
+.hero h3  {
+  top: 50%;
+}
+
+.hero h5  {
+  bottom: 20%;
+}
+
+.hero h1, .hero h3, em  {
+  color: #fff;
+  text-shadow: 4px 4px 8px #000;
+}
+
+.hero h5 a  {
+  text-decoration: none;
+  font-weight: 400;
+  background-color: rgba(164, 100, 12, 0.8);
+  color: #fff;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  box-shadow: 4px 4px 8px #000;
+}
+
+.hero h5 a:hover  {
+  background-color: #A4640C;
+}
+
+/* Style rules for Main Content */
+main  {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section  {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section:nth-of-type(2)  {
+  background-color: rgba(84, 84, 84, 0.25);
+}
+
+section h3  {
+  text-align: center;
+  margin: 1em;
+  font-size: 1.5em;
+}
+
+figure  {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+} 
+
+figure img  {
+  width: 80%;
+  margin: 0 auto;
+}
+
+figcaption  {
+  text-align: center;
+  margin: 1.5em 1em;
+  font-size: 1.2em;
+}
+
+figcaption a  {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+figcaption a:hover  {
+  color:rgba(164, 100, 12, 0.8);
+}
+
+/* Style rules for Footer */
+footer  {
+  display: flex;
+  align-items: center;
+  background-color: #545454;
+  padding: 1.25em;
+  font-size: 0.75em;
+  width: 100%;
+  bottom: 0;
+  margin-top: 2em;
+}
+
+footer p  {
+  color: #fff;
+  width: 70%;
+  font-size: 1.5em;
+  margin-left: 1.5em;
+}
+
+div .social-media  {
+  width: 25%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.social-media img  {
+  width: 2em;
+}
+
+.social-media a  {
+  padding: 1.5em;
+}
+
+/* Style rules for Tablet Viewport */
+@media screen and (min-width: 780px), print  {
+
+  /* Tablet Viewport: Style rules for Header */
+  header  {
+    width: 30%;
+    padding: 1.5rem;
+  }
+
+  /* Tablet Viewport: Style rules for Navigation */
+  .navbar  {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5em;
+    top: 0;
+    background-color: rgba(84, 84, 84, 0.25);
+  }
+
+  nav  {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  nav ul  {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  nav li  {
+    border: none;
+  }
+
+  nav li a:hover  {
+    color: rgb(164, 100, 12);
+  }
+
+  /* Tablet Viewport: Style rules for Hero */
+  .hero h1  {
+    font-size: 4em;
+  }
+
+  .hero h3  {
+    font-size: 3em;
+  }
+
+  .hero h5  {
+    font-size: 2em;
+  }
+
+  /* Tablet Viewport: Style rules for main content */
+  .tablet-desktop  {
+    display: block;
+    max-width: 100%;
+    margin: 5%;
+  }
+
+  .tablet-desktop img  {
+    width: 30%;
+    float: left;
+    margin: 0 2% 1% 0;
+  }
+
+  .tablet-desktop h3  {
+    font-size: 1.25rem;
+    margin-bottom: 2%;
+  }
+
+  .tablet-desktop a  {
+    text-decoration: none;
+    border-bottom: solid 8px rgba(164, 100, 12, 0.6);
+  }
+
+  .tablet-desktop a:hover  {
+    color: #A4640C;
+    border-bottom: solid 8px #A4640C;
+  }
+
+  .tablet-desktop p  {
+    margin-bottom: 1em;
+    font-size: 1.25em;
+  }
+
+  .grid  {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 5px;
+    align-content: start;
+  }
+
+  .grid section  {
+    justify-content: flex-start;
+  }
+
+  section:nth-of-type(2)  {
+    background-color: inherit;
+  }
+
+  figure  {
+    width: 30vw;
+  }
+
+}
+
+/* Style rules for Desktop Viewport */
+@media screen and (min-width: 1015px), print  {
+
+  /* Desktop Viewport: Style rules for header */
+
+  /* Desktop Viewport: Style rules for nav */
+  nav li a  {
+    font-size: 1.5em;
+    border-left: solid 5px #A4640C;
+  }
+
+  /* Come back to styling dropdown later
+  .dropdown  {
+    position: relative;
+    display: block;
+  }
+
+  .droplink  {
+    color: #fff;
+    border: none;
+  }
+
+  .dropdown-content  {
+    display: none;
+    position: absolute;
+    background-color: rgba(84, 84, 84, 0.25);
+    min-width: 160px;
+    z-index: 1;
+  }
+
+  .dropdown-content a  {
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover  {
+    background-color: rgba(164, 100, 12, 0.5);
+  }
+
+  .dropdown:hover .dropdown-content  {
+    display: block;
+  }
+  */
+
+  /* Desktop Viewport: Style rules for main content */
+
+  /* Desktop Viewport: Style rules for footer */
+}
+
+/* Style rules for Large Desktop Viewport */
+@media screen and (min-width: 1921px)  {
+
+  #page-container  {
+    width: 1920px;
+    margin: 0 auto;
+  }
+
+}

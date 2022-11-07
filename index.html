@@ -2,29 +2,100 @@
 <!-- This site was created by Tess Thomas -->
 <html lang="en">
 <head>
+  <title>Vicious Cycles</title>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/styles.css">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vicious Cycles</title>
-  <style>
-    body  {
-      background-color: #E7FBFB;
-    }
-
-    header h1  {
-      font-size: 4em;
-      text-align: center;
-      color: #010B5B;
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Header -->
-    <header>
-      <h1>Vicious Cycles</h1>
-    </header>
+  <div id="page-container">
+    <div class="navbar">
+      <!-- Header -->
+      <header>
+        <a href="index.html"><img src="images/vicious-cycles-logo.png" alt="Vicious Cycles Logo"></a>
+      </header>
 
+      <!-- Navigation -->
+      <nav>
+        <ul>
+          <!--<li><a href="index.html">Home</a></li> Let logo be Home link? -->
+          <!--<div class="dropdown">-->
+            <li class="droplink"><a href="scripts/shop.html">Shop</a></li>         
+              <!-- <div class="dropdown-content">
+                <a href="#">Bikes</a>
+                <a href="#">Gear</a>
+                <a href="#">Classes</a>
+              </div>
+              </div>-->
+          <li><a href="scripts/services.html">Services</a></li>
+          <li><a href="scripts/events.html">Events</a></li>
+          <li><a href="scripts/about.html">About</a></li>
+          <li><a href="scripts/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Hero Image with link to shop-->
+    <div class="hero">
+      <img src="images/hero-bike-pixabay.jpg" alt="road bike leaning against interior wall">
+      <!--<div class="hero-text">-->
+        <h1>Bikes for <em>Every Body</em></h1>
+        <h3>Find what's right for you</h3>
+        <h5><a href="scripts/shop.html">Shop</a></h5>
+      <!--</div>-->
+    </div>
+
+    <!-- Main Content -->
+    <main>
+      <div class="tablet-desktop">
+        <img src="images/critical-mass-ahshea.jpg" alt="group of cyclists taking up both lanes of a street">
+        <h3>Event Spotlight: <a href="https://en.wikipedia.org/wiki/Critical_Mass_(cycling)" target="_blank">Critical Mass</a></h3>
+        <p>Join the Vicious Cycles crew for Durham's monthly Critical Mass ride! Every second Saturday, at a different time and location, a whole bunch of local cyclists come together to reclaim the streets and celebrate pedal power. We use this event as an opportunity to communicate the value of biking as transportation to our local representatives, and ask for the common sense changes that will make Durham a safe space to ride in.</p>
+        <p>Sign up for our newsletter to get the details for this month's Critical Mass and other community events. The more, the merrier and the greater chance we have of making positive change. Critical Mass has a productive relationship with local officials and most months we're even joined by a few!</p>
+        <p>Nervous to participate in direct action, but want to support the cause? No worries! Vicous Cycles wants every rider to feel comfortable and will keep you in the loop on a variety of opportunities to engage with the Triangle area cycling community. Whether you're on training wheels or dialing in your sprint diagnostics, Vicious Cycles has got a group for you.</p>
+      </div>
+      <div class="grid">
+        <section id="about">
+          <h3>Hey Y'all</h3>
+          <figure>
+            <img src="images/phone-uriel-mont.jpg" alt="close up of woman using phone while leaning on bike">
+            <figcaption>From polo pro to just passing through, Vicious Cycles is here to help you find what you're looking for. We stock a wide array of gear and aren't tied down by exclusive agreements with just a few brands. Not sure what you need? We've got consults for that, too.</figcaption>
+          </figure>
+        </section>
+
+        <section id="classes">
+          <h3>Wanna up your game?</h3>
+          <figure>
+            <img src="images/learn-karolina-grabowska.jpg" alt="close up of someone adjusting a bike pedal">
+            <figcaption>We offer a wide range of classes for every experience level. Whether you could use a lesson in basic repair, street safety, intermediate maintenance or are looking for a custom build consult to really dial in your performance, it's probably on the course list.</figcaption>
+          </figure>
+        </section>
+
+        <section id="events">
+          <h3>Get in on the scene!</h3>
+          <figure>
+            <img src="images/involved-mario-cuadros.jpg" alt="group of cyclists on the street at night">
+            <figcaption>Vicious is proud to partake in all sorts of local cycling events and are always looking to welcome newcomers. Family rides, polo matches, Alley Cat races, Bike and Brew meetings abound! <a href="#events" target="_blank">Check out</a> what's coming up in the Triangle soon.</figcaption>
+          </figure>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; Vicious Cycles 2022</p>
+      <div class="social-media">
+        <a href="https://www.facebook.com/" target="_blank"><img src="images/twitter-white-logo.png" alt="white twitter logo link" width="190"></a>
+        <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook-white-logo.png" alt="white facebook logo link" width="190"></a>
+      </div>
+    </footer>
+
+  </div>
 </body>
 
 </html>
