@@ -34,6 +34,10 @@ header  {
   background-color: #cacfcd;
 }
 
+header > a  {
+  cursor: pointer;
+}
+
 /* Style rules for Navigation */
 nav  {
   padding: 1%;
@@ -91,7 +95,7 @@ nav li a  {
 }
 
 .hero h5  {
-  bottom: 20%;
+  bottom: 15%;
 }
 
 .hero h1, .hero h3, em  {
@@ -101,7 +105,7 @@ nav li a  {
 
 .hero h5 a  {
   text-decoration: none;
-  font-weight: 400;
+  font-size: 1.25em;
   background-color: rgba(164, 100, 12, 0.8);
   color: #fff;
   padding: 0.5em 1em;
@@ -133,15 +137,24 @@ section:nth-of-type(2)  {
 
 section h3  {
   text-align: center;
-  margin: 1em;
+  margin: 2rem;
+}
+
+section h3 a  {
+  text-decoration: none;
   font-size: 1.5em;
+}
+
+section h3 a:hover  {
+  color: rgba(164, 100, 12, 0.8);
+  border-bottom: solid 8px #A4640C;
 }
 
 figure  {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 90%;
+  width: 100%;
 } 
 
 figure img  {
@@ -164,43 +177,127 @@ figcaption a:hover  {
   color:rgba(164, 100, 12, 0.8);
 }
 
+/* Style rules for Form */
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin-bottom: 2%;
+  margin-left: 3%;
+}
+
+input, textarea, select {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+main.main-form  {
+  background-color: rgba(84, 84, 84, 0.25);
+}
+
+form  {
+  margin: 2% auto;
+  padding: 4% 0;
+  width: 100%;
+}
+
+form h1  {
+  text-align: center;
+}
+
+fieldset  {
+  margin: 3% auto;
+  border: 2px solid #A4640C;
+  border-radius: 5px;;
+  width: 95%;
+  padding: 0 3% 3%;
+}
+
+fieldset legend  {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: 2% 3% 0 3%;
+  padding: 0 1%;
+}
+
+label, .experience  {
+  display: block;
+}
+
+.fname, .lname, .pronouns, .email, .class-select, .radio-box, .info  {
+  margin: 2% auto 0 2%;
+}
+
+input, label + select, label + textarea  {
+  border-radius: 5px;
+  margin: 1.5% auto;
+}
+
+input[type="text"], input[type="email"], #moreinfo  {
+  width: 75%;
+}
+
+.radio-box input[type="radio"] {
+  width: 15px;
+}
+
+.radio-box label {
+  display: inline-block;
+}
+
+form #submit  {
+  padding: 2%;
+  text-align: center;
+  display: block;
+  width: 95%;
+  margin: 0 auto;
+  background-color: rgba(164, 100, 12, 0.8);
+  color: #fff;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+form #submit:active, form #submit:hover  {
+  background-color:rgb(164, 100, 12);
+  cursor: pointer;
+}
+
 /* Style rules for Footer */
 footer  {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   background-color: #545454;
   padding: 1.25em;
   font-size: 0.75em;
   width: 100%;
   bottom: 0;
-  margin-top: 2em;
 }
 
 footer p  {
   color: #fff;
-  width: 70%;
+  width: 60%;
   font-size: 1.5em;
-  margin-left: 1.5em;
 }
 
 div .social-media  {
   width: 25%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-evenly;
   align-items: center;
 }
 
-.social-media img  {
-  width: 2em;
-}
-
 .social-media a  {
-  padding: 1.5em;
+  margin: 0 10px;
 }
 
 /* Style rules for Tablet Viewport */
-@media screen and (min-width: 780px), print  {
+@media screen and (min-width: 768px), print  {
 
+  /* Tablet Viewport: General styles */
+  .mobile  {
+    display: none;
+  }
+  
   /* Tablet Viewport: Style rules for Header */
   header  {
     width: 30%;
@@ -252,7 +349,7 @@ div .social-media  {
   .tablet-desktop  {
     display: block;
     max-width: 100%;
-    margin: 5%;
+    margin: 3rem 2rem 0rem 2rem;
   }
 
   .tablet-desktop img  {
@@ -262,7 +359,7 @@ div .social-media  {
   }
 
   .tablet-desktop h3  {
-    font-size: 1.25rem;
+    font-size: 1.75em;
     margin-bottom: 2%;
   }
 
@@ -285,19 +382,39 @@ div .social-media  {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: 5px;
-    align-content: start;
+    border: 1px solid yellowgreen;
   }
 
   .grid section  {
-    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
   }
 
   section:nth-of-type(2)  {
     background-color: inherit;
   }
 
-  figure  {
-    width: 30vw;
+  .grid section h3  {
+    margin: auto;
+    display: block;
+  }
+
+  .grid section figure  {
+    height: 85%;
+    justify-content: flex-start;
+    margin: 0 auto;
+  }
+
+  /* Tablet Viewport: Style rules for form */
+  div label, .experience  {
+    font-size: 1.25em;
+  }
+
+  div input, select  {
+    font-size: 1.25em;
+    padding: 0.5%;
   }
 
 }
@@ -306,7 +423,9 @@ div .social-media  {
 @media screen and (min-width: 1015px), print  {
 
   /* Desktop Viewport: Style rules for header */
-
+  header img:hover  {
+    border-bottom: 5px solid rgba(164, 100, 12, 0.8);
+  }
   /* Desktop Viewport: Style rules for nav */
   nav li a  {
     font-size: 1.5em;
@@ -348,7 +467,45 @@ div .social-media  {
 
   /* Desktop Viewport: Style rules for main content */
 
+  /* Desktop Viewport: Style rules for form */
+  input  {
+    margin: 0.5% auto;
+  }
+
+  .radio-box label  {
+    margin: 0.25em 0.5em;
+  }
+
+  form #submit  {
+    width: 25%;
+    margin-left: 2.5%;
+  }
+
+  .bottom-box  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .bottom-box a  {
+    margin-right: 2.5%;
+    text-decoration: none;
+  }
+
+  .bottom-box a:hover  {
+    border-bottom: 5px solid rgba(164, 100, 12, 0.8);
+    cursor: pointer;
+  }
+
   /* Desktop Viewport: Style rules for footer */
+  footer  {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .social-media a  {
+    width: 15%;
+  }
 }
 
 /* Style rules for Large Desktop Viewport */
