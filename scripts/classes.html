@@ -17,14 +17,12 @@
     <div class="navbar">
       <!-- Header -->
       <header>
-        <a href="index.html"><img src="../images/vicious-cycles-logo.png" alt="Vicious Cycles Logo"></a>
+        <a href="../index.html"><img src="../images/vicious-cycles-logo.png" alt="Vicious Cycles Logo"></a>
       </header>
 
       <!-- Navigation -->
       <nav>
         <ul>
-          <!--<li><a href="index.html">Home</a></li> Let logo be Home link? -->
-          <!--<div class="dropdown">-->
             <li class="droplink"><a href="shop.html">Shop</a></li>         
               <!-- <div class="dropdown-content">
                 <a href="#">Bikes</a>
@@ -41,8 +39,88 @@
     </div>
 
     <!-- Main Content -->
-    <main>
+    <main class="main-form">
+      <form action="#" id="signup" method="POST" name="signup">
+        <h1>Sign Up for Classes</h1>
 
+        <fieldset>
+          <legend>Your Info</legend>
+          <div class="fname">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname">
+          </div>
+
+          <div class="lname">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname">
+          </div>
+
+          <div class="pronouns">
+            <label for="pronouns">Pronouns</label>
+            <select name="pronouns" id="pronouns">
+              <option value="theythem">they/them</option>
+              <option value="sheher">she/her</option>
+              <option value="hehim">he/him</option>
+              <option value="shethey">she/they</option>
+              <option value="hethey">he/they</option>
+            </select>
+          </div>
+
+          <div class="email">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Class Info</legend>
+          <div class="class-select">
+            <label for="class">Class</label>
+            <select name="class" id="class">
+              <optgroup label="Beginner">
+                <option value="basicrepair">Basic Repair</option>
+                <option value="basicmaint">Basic Maintenance</option>
+                <option value="safety">Intro to Bike Safety</option>
+                <option value="mtn">Intro to Mountain Biking</option>
+              </optgroup>
+              <optgroup label="Intermediate">
+                <option value="intrepair">Intermediate Repair</option>
+                <option value="intmaint">Intermediate Maintenance</option>
+                <option value="introbuild">Intro to Custom Builds</option>
+                <option value="train">Next Level Training</option>
+              </optgroup>
+              <optgroup label="Advanced">
+                <option value="custombuild">Custom Builds</option>
+                <option value="polopro">Polo Builds</option>
+                <option value="raceopt">Race Optimization</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <div class="radio-box">
+            <p class="experience">Experience Level</p>
+
+            <input type="radio" name="experience" id="beginner">
+            <label for="beginner">Beginner</label>
+
+            <input type="radio" name="experience" id="intermediate">
+            <label for="intermediate">Intermediate</label>
+
+            <input type="radio" name="experience" id="advanced">
+            <label for="advanced">Advanced</label>
+          </div>
+
+          <div class="info">
+            <label for="moreinfo">Anything else you'd like us to know?</label>
+            <textarea name="moreinfo" id="moreinfo" cols="30" rows="5"></textarea>
+          </div>
+        </fieldset>
+
+        <div class="bottom-box">
+        <input type="submit" name="submit" id="submit">
+        <a href="../index.html"><h2>Back Home</h2></a>
+        </div>
+      </form>
     </main>
 
     <!-- Footer -->
