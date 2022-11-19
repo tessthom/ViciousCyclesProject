@@ -16,11 +16,12 @@ File Name: styles.css
 /* Style rules for Mobile Viewport */
 /* General style rules */
 body  {
-  background-color:rgba(0, 135, 79, 0.05);
+  background-color:#00874f0d;
 }
 
 img  {
   max-width: 100%;
+  border-radius: 8px;
 }
 
 .tablet-desktop  {
@@ -30,12 +31,16 @@ img  {
 /* Style rules for Header */
 header  {
   top: 0;
-  padding: 10px;
+  padding: 0;
+  height: 8vh;
   background-color: #cacfcd;
+  height: 10vh;
 }
 
-header > a  {
-  cursor: pointer;
+#logo  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Style rules for Navigation */
@@ -51,12 +56,12 @@ nav ul  {
 
 nav li  {
   display: block;
-  border-top: 2px solid #A4640C;
+  border-top: 3px solid #A4640C;
   width: 95%;
   margin: 0 auto;
 }
 
-li:first-child  {
+li.mobile  {
   border-top: none;
 }
 
@@ -70,12 +75,20 @@ nav li a  {
   padding: 0.5em 1em;
 }
 
+.dropdown  {
+  display: none;
+}
+
 /* Style rules for Hero */
 .hero  {
   position: relative;
   display: inline-block;
   width: 100%;
   height: auto;
+}
+
+.hero img  {
+  border-radius: 0;
 }
 
 .hero h1, .hero h3, .hero h5  {
@@ -118,10 +131,53 @@ nav li a  {
 }
 
 /* Style rules for Main Content */
-main  {
+main.home  {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+div.about-image  {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+}
+
+.mobile-heading  {
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  width: 100%;
+  text-align: center;
+  transform: translate( -50%, -50% );
+  font-size: 2.5em;
+  color: #fff;
+  text-shadow: 4px 4px 8px #000;
+}
+
+.about-container p  {
+  margin: 1.5em 2.5%;
+}
+
+.about-container p:first-of-type  {
+  text-indent: 0;
+}
+
+.about-container span  {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+div.about-container > p > a  {
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 5px solid rgba(164, 100, 12, 0.6);
+}
+
+div.about-container > p > a:active  {
+  color: #A4640C;
+  border-bottom: 5px solid rgb(164, 100, 12);
 }
 
 section  {
@@ -129,15 +185,37 @@ section  {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 3vh 0;
 }
 
-section:nth-of-type(2)  {
+.home section  {
+  padding: 0;
+}
+
+.home section:nth-child(even)  {
   background-color: rgba(84, 84, 84, 0.25);
+}
+
+.shop section  {
+  padding: 0;
+}
+
+.events > section:nth-child(odd), .shop > section:nth-child(odd)  {
+  background-color: rgba(84, 84, 84, 0.25);
+}
+
+.shop h3  {
+  font-size: 1.5em;
+}
+
+.shop span  {
+  font-style: italic;
+  font-weight: bold;
 }
 
 section h3  {
   text-align: center;
-  margin: 2rem;
+  margin: 1.5rem;
 }
 
 section h3 a  {
@@ -173,8 +251,50 @@ figcaption a  {
   font-weight: bold;
 }
 
-figcaption a:hover  {
-  color:rgba(164, 100, 12, 0.8);
+.events h3  {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0 auto 3vh;
+}
+
+.events section:last-of-type h3  {
+  margin-top: 3vh;
+}
+
+.events span  {
+  font-style: italic;
+}
+
+.events p, .events figcaption  {
+  margin-bottom: 1vh;
+}
+
+.services section  {
+  padding-bottom: 0;
+}
+
+.services section:last-of-type  {
+  padding-bottom: 3vh;
+}
+
+.services figcaption  {
+  text-align: left;
+  margin: 0 10%;
+}
+
+.services li  {
+  list-style-type: none;
+  display: flex;
+}
+
+.services li span  {
+  margin-left: auto;
+}
+
+.services h3  {
+  margin: 1vh 0;
+  text-align: left;
+  border-bottom: 5px solid #A4640C;
 }
 
 /* Style rules for Form */
@@ -190,13 +310,10 @@ input, textarea, select {
   box-sizing: border-box;
 }
 
-main.main-form  {
-  background-color: rgba(84, 84, 84, 0.25);
-}
-
 form  {
-  margin: 0 auto 2%;
+  margin: 0 auto;
   width: 100%;
+  padding: 3vh 0;
 }
 
 form h1  {
@@ -206,11 +323,11 @@ form h1  {
 }
 
 fieldset  {
-  margin: 3% auto;
+  margin: 3vh auto;
   border: 2px solid #A4640C;
   border-radius: 5px;;
   width: 95%;
-  padding: 0 3% 3%;
+  padding: 0 2vh 2vh;
 }
 
 fieldset legend  {
@@ -258,7 +375,7 @@ form #submit  {
   text-align: center;
   display: block;
   width: 95%;
-  margin: 2% auto;
+  margin: 2vh auto;
   background-color: rgba(164, 100, 12, 0.8);
   color: #fff;
   font-size: 1.25em;
@@ -281,7 +398,7 @@ h2.back-home  {
   text-decoration: none;
 }
 
-/* Style rules for Contact info and map */
+/* Style rules for contact info and map */
 #contact  {
   display: flex;
   flex-direction: column;
@@ -305,13 +422,13 @@ h2.back-home  {
   box-shadow: 4px 4px 8px #000;
 }
 
-#contact a.contact-email-link  {
+a.contact-email-link   {
   text-decoration: none;
 }
 
 iframe.map  {
   max-width: 95%;
-  margin: 2% auto;
+  margin: 0 auto;
   border: 3px solid #A4640C;
   border-radius: 5px;
   display: block;
@@ -354,43 +471,66 @@ div .social-media  {
     display: none;
   }
 
-  /* Tablet Viewport: Style rules for Header */
+  .tablet  {
+    display: inline-block;
+  }
+
+  body  {
+    width: 100%;
+  }
+
+  /* Tablet Viewport: Style rules for header */
   header  {
-    width: 230;
+    padding-left: 1%;
   }
 
   #logo  {
-    display: inline-block;
-
+    display: flex;
+    align-items: center;
+    width: 25%;
+    padding: 0;
+    margin-left: 2.5%;
+    flex: 1 1 auto;
   }
 
-  /* Tablet Viewport: Style rules for Navigation */
+  /* Tablet Viewport: Style rules for navigation */
   .navbar  {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 100%;
-    margin-bottom: 1.5em;
+    max-width: 100%;
+    height: 12vh;
     top: 0;
     background-color: rgba(84, 84, 84, 0.25);
   }
 
+  nav  {
+    width: 70%;
+  }
+
   nav ul  {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-items: center;
-    width: 60%;
+    width: 100%;
   }
 
   nav li  {
     border: none;
+    display: inline-block;
   }
 
+  nav li a  {
+    font-size: 1.25em;
+    text-align: right;
+    padding: 0.5em;
+  }
+  
   nav li a:hover  {
     color: rgb(164, 100, 12);
   }
 
-  /* Tablet Viewport: Style rules for Hero */
+  /* Tablet Viewport: Style rules for hero */
   .hero h1  {
     font-size: 4em;
   }
@@ -404,16 +544,31 @@ div .social-media  {
   }
 
   /* Tablet Viewport: Style rules for main content */
-  .tablet-desktop  {
+  main  {
+    padding-bottom: 0 0 3vh;
+    margin: 0 auto;
+  }
+
+  main.home, main.about  {
+    padding: 0;
+    margin: 3vh auto;
+  }
+  
+  .tablet-desktop, .about-container  {
     display: block;
     max-width: 100%;
-    margin: 3rem 2rem 0rem 2rem;
+    margin: 0 2.5%;
+    font-size: 1.25rem;
+  }
+
+  aside.tablet-desktop  {
+    font-size: 1rem;
   }
 
   .tablet-desktop img  {
     width: 30%;
     float: left;
-    margin: 0 2% 1% 0;
+    margin: 0 2em 1em 0;
   }
 
   .tablet-desktop h3  {
@@ -464,6 +619,68 @@ div .social-media  {
     margin: 0 auto;
   }
 
+  .home section:nth-child(even)  {
+    background-color: transparent;
+  }
+
+  .events section:nth-child(odd), .shop section:nth-child(odd)  {
+    background-color: transparent;
+  }
+
+  .events section:nth-child(even), .shop section:nth-child(even)  {
+    background-color: rgba(84, 84, 84, 0.25);
+  }
+
+  .events section:last-of-type  {
+    padding-bottom: 3vh;
+  }
+
+  div.about-image  {
+    width: 40%;
+    float: left;
+    margin: 0 2em 0 0;
+  }
+
+  .mobile-heading  {
+    display: none;
+  }
+
+  h2.tablet-desktop  {
+    font-size: 2em;
+    margin-bottom: 2%;
+    font-style: italic;
+  }
+
+  .about-container p  {
+    margin: 0 auto 1em;
+    font-size: 1.25em;
+  }
+
+  aside.tablet-desktop  {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    margin: 3rem auto 0 0;
+  }
+
+  aside.tablet-desktop p, aside.tablet-desktop h3  {
+    margin: 0 auto 0 0;
+    flex: 1 1 auto;
+  }
+
+  #logo  {
+    background-color: transparent;
+  }
+  
+  section  {
+    padding: 3vh 0;
+  }
+
+  figcaption  {
+    width: 80%;
+    align-self: center;
+  }
+
   /* Tablet Viewport: Style rules for form */
   #form h1  {
     border-bottom: 3px solid #A4640C;
@@ -475,7 +692,7 @@ div .social-media  {
     border: 3px solid #A4640C;
   }
 
-  input#fname, input#lname, select#pronouns, input#email, select#experience  {
+  input#fname, input#lname, select#pronouns, input#email, select#experience, select#class, textarea  {
     border: 0.75px solid #545454;
   }
   
@@ -501,13 +718,32 @@ div .social-media  {
     margin: 1% auto;
   }
 
+  div#contact  {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    margin: 0 2.5% 4vh;
+  }
+
   #contact h2  {
     border-bottom: 3px solid #A4640C;
+    width: 65%;
+    margin-left: 0;
   }
 
   /* Tablet Viewport: Style rules for footer */
+  footer  {
+    margin-bottom: 0;
+    height: 12vh;
+  }
+
+  footer > p  {
+    margin-left: 2.5%;
+  }
+
   div.social-media  {
     width: 15%;
+    margin-right: 2.5%;
   }
 
 }
@@ -517,48 +753,159 @@ div .social-media  {
 
   /* Desktop Viewport: Style rules for header */
   header img:hover  {
-    border-bottom: 5px solid rgba(164, 100, 12, 0.8);
-  }
-  /* Desktop Viewport: Style rules for nav */
-  nav li a  {
-    font-size: 1.5em;
-    border-left: solid 5px #A4640C;
+    border-bottom: 5px solid #A4640C;
   }
 
-  /* Come back to styling dropdown later
+  header > a  {
+    cursor: pointer;
+  }
+
+  /* Desktop Viewport: Style rules for nav */
+  .tablet  {
+    display: none;
+  }
+
+  div.navbar  {
+    background-color:#cacfcd;
+    height: 10vh;
+  }
+
+  nav li a, nav li a.droplink  {
+    font-size: 1.5em;
+    text-align: center;
+    border-left: 5px solid #A4640C;
+  }
+
+  a.droplink:first-child  {
+    border-left: none;
+  }
+  
+  /* Desktop Viewport: Style rules for dropdown menu */
   .dropdown  {
     position: relative;
-    display: block;
-  }
-
-  .droplink  {
-    color: #fff;
-    border: none;
+    display: inline-block;
+    min-width: 20%;
   }
 
   .dropdown-content  {
     display: none;
     position: absolute;
-    background-color: rgba(84, 84, 84, 0.25);
-    min-width: 160px;
+    background-color: #cacfcd;
+    min-width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
     z-index: 1;
   }
 
+  .dropdown .droplink  {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #545454;
+    margin: 0;
+    padding: 0.5em;
+  }
+
+  .navbar a:hover, .dropdown:hover .droplink  {
+    color: #A4640C;
+  }
+
   .dropdown-content a  {
+    float: none;
+    color: #545454;
+    padding: 0.5em 1em;
+    font-size: 1.25em;
     text-decoration: none;
     display: block;
+    text-align: left;
   }
 
   .dropdown-content a:hover  {
-    background-color: rgba(164, 100, 12, 0.5);
+    color: #A4640C;
+    border-bottom: 5px solid #A4640C;
   }
 
   .dropdown:hover .dropdown-content  {
     display: block;
   }
-  */
+
+  /* Desktop Viewport: Style rules for hero */
+  .hero h1  {
+    font-size: 5em;
+  }
+
+  .hero h2  {
+    font-size: 4em;
+  }
 
   /* Desktop Viewport: Style rules for main content */
+  body  {
+    background-color: #00874f0d;
+  }
+  
+  main  {
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  div.about-container > p > a:hover  {
+    color: #A4640C;
+    border-bottom: 5px solid #A4640C;
+  }
+
+  aside.tablet-desktop  {
+    width: 70%;
+    margin: 3em auto 0 0;
+  }
+
+  aside.tablet-desktop p  {
+    margin: 0 1em;
+  }
+
+  figcaption a:hover  {
+    color:rgba(164, 100, 12, 0.8);
+  }
+
+  /* Desktop Viewport: Style rules for Events main */
+
+  .events section:nth-child(even)  {
+    background-color: transparent;
+  }
+
+  .events img  {
+    min-width: 95%;
+  }
+
+  .events figcaption  {
+    min-width: 95%;
+    text-align: center;
+    margin: 2vh auto;
+  }
+
+  .events  {
+    display: grid;
+    grid-template: 1fr 0.75fr / repeat(3, 1fr);
+    justify-items: center;
+    align-items: start;
+    margin: 0 2.5%;
+  }
+
+  .events section  {
+    width: 95%;
+    margin: 0;
+    padding-bottom: 0;
+  }
+
+  .events section h3  {
+    padding-top: 1vh;
+  }
+
+  .events section:last-of-type h3  {
+    padding-top: 1vh;
+    margin-top: 0;
+  }
+
+  .events p  {
+    font-size: 1.25em;
+  }
 
   /* Desktop Viewport: Style rules for form */
   form h1  {
@@ -596,13 +943,8 @@ div .social-media  {
     cursor: pointer;
   }
 
-  /* Desktop Viewport: Style rules for contact */
-  div#contact  {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: space-between;
-    margin: 0 2.5% 2%;
-  }
+  /* Desktop Viewport: Style rules for Contact main */
+  
 
   .desktop-contact  {
     display: grid;
@@ -616,20 +958,50 @@ div .social-media  {
     border-bottom: 5px solid rgba(164, 100, 12, 0.8);
   }
 
-  #contact a.contact-email-link:hover  {
+  a.contact-email-link:hover  {
     border-bottom: 3px solid #A4640C;
     color: #A4640C;
   } 
 
+  div.desktop-map  {
+    width: 80%;
+  }
+
+  /* Desktop Viewport: Style rules for Shop main */
+  #shop  {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .item  {
+    justify-self: center;
+    align-self: start;
+  }
+
+  .item h3  {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
   /* Desktop Viewport: Style rules for footer */
   footer  {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     height: 10vh;
+  }
+
+  .about-footer  {
+    position: fixed;
+  }
+
+  footer p  {
+    margin-left: 2.5%;
+    font-size: 1.5rem;
   }
 
   .social-media a  {
     width: 15%;
+    margin-right: 0;
   }
 }
 
