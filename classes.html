@@ -16,23 +16,25 @@
   <div id="page-container">
     <div class="navbar">
       <!-- Header -->
-      <header>
+      <header id="logo">
         <a href="index.html"><img src="images/vicious-cycles-logo.png" alt="Vicious Cycles Logo"></a>
       </header>
 
       <!-- Navigation -->
       <nav>
-        <ul>
-            <li class="droplink"><a href="shop.html">Shop</a></li>         
-              <!-- <div class="dropdown-content">
+        <ul>       
+          <div class="dropdown">
+            <li><a class="droplink" href="shop.html">Shop</a></li> 
+              <div class="dropdown-content">
                 <a href="#">Bikes</a>
                 <a href="#">Gear</a>
-                <a href="#">Classes</a>
+                <a href="services.html">Services</a>
               </div>
-              </div>-->
-          <li><a href="services.html">Services</a></li>
+          </div>
+          <li class="mobile tablet"><a href="shop.html">Shop</a></li>
           <li><a href="events.html">Events</a></li>
           <li><a href="about.html">About</a></li>
+          <li><a href="classes.html">Classes</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -43,6 +45,7 @@
       <form action="#" id="signup" method="POST" name="signup">
         <h1>Sign Up for Classes</h1>
 
+        <!-- Fieldset for User Info -->
         <fieldset>
           <legend>Your Info</legend>
           <div class="fname">
@@ -72,6 +75,7 @@
           </div>
         </fieldset>
 
+        <!-- Fieldset for Class Info -->
         <fieldset>
           <legend>Class Info</legend>
           <div class="class-select">
